@@ -41,4 +41,25 @@ console.log(autoBenzia);
 console.log(autoDisel);
 console.log(restoDelleAuto);
 
+//creao array di stringhe
+const string = ['pippo', 'PLUTO', 'Paperino'];
 
+function invertString(newString) {
+    // Creare un nuovo array vuoto per memorizzare le stringhe con la prima lettera in maiuscolo
+    const newArray = [];
+    
+    // Iterare sull'array originale usando un ciclo `for`
+    for (let i = 0; i < newString.length; i++) {
+        // Convertire ogni stringa in minuscolo e poi mettere la prima lettera in maiuscolo
+        const newArrayLower = newString[i].toLowerCase();
+        // Prendo il primo carattere lo metto in Maiuscolo e faccio stampare il restante della parola dall'indice 1
+        const finishArray = newArrayLower.charAt(0).toUpperCase() + newArrayLower.slice(1);
+
+        // Aggiungere la stringa modificata all'array
+        newArray.push(finishArray);
+    }
+
+    console.log(newArray);
+}
+
+invertString(string);
