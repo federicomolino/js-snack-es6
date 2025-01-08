@@ -99,13 +99,13 @@ function verificaGuida(persona) {
     }
 }
 
-function puoiGuidare(persone) {
+function puoiGuidare(person) {
     //inizializzo nuovo array
     const newArray = [];
 
     //intero su ogni elemento dell'array persone
-    for (let i = 0; i < persone.length; i++) {
-        const persona = persone[i];
+    for (let i = 0; i < person.length; i++) {
+        const persona = person[i];
         //verifico richiamando la funzione se la persona può guidare
         const sePuoiGuidare = verificaGuida(persona);
         // aggiugo la frase al nuovo array
