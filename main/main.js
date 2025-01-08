@@ -63,3 +63,20 @@ function invertString(newString) {
 }
 
 invertString(string);
+
+
+const animali = [
+    {nome:"leone", famiglia:"felidi", classe:"mammiferi"},
+    {nome:"cane", famiglia:"canidi", classe:"mammiferi"},
+    {nome:"gallina", famiglia:"fasianidi", classe:"uccelli"}
+];
+
+function mammiferi (){
+    return animali.filter(function(listaMammiferi){
+        return listaMammiferi.classe === 'mammiferi'
+    });
+}
+
+const arrayMammiferi = mammiferi();
+
+console.log(arrayMammiferi);
