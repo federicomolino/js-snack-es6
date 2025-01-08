@@ -64,19 +64,58 @@ function invertString(newString) {
 
 invertString(string);
 
-
+//Creao array
 const animali = [
     {nome:"leone", famiglia:"felidi", classe:"mammiferi"},
     {nome:"cane", famiglia:"canidi", classe:"mammiferi"},
     {nome:"gallina", famiglia:"fasianidi", classe:"uccelli"}
 ];
 
-function mammiferi (){
+function mammiferi (animali){
     return animali.filter(function(listaMammiferi){
         return listaMammiferi.classe === 'mammiferi'
     });
 }
 
-const arrayMammiferi = mammiferi();
+const arrayMammiferi = mammiferi(animali);
 
 console.log(arrayMammiferi);
+
+
+
+//creo array persone
+const persone = [
+    { nome: "leone", cognome: "mio", eta: 18 },
+    { nome: "cane", cognome: "tuo", eta: 22 },
+    { nome: "gallina", cognome: "suo", eta: 14 }
+];
+
+//funzione per verificare se la persona può guidare
+function verificaGuida(persona) {
+    if (persona.eta >= 18) {
+        return "si";
+    } else {
+        return "no";
+    }
+}
+
+function puoiGuidare(persone) {
+    //inizializzo nuovo array
+    const newArray = [];
+
+    //intero su ogni elemento dell'array persone
+    for (let i = 0; i < persone.length; i++) {
+        const persona = persone[i];
+        //verifico richiamando la funzione se la persona può guidare
+        const sePuoiGuidare = verificaGuida(persona);
+        // aggiugo la frase al nuovo array
+        newArray.push(`${persona.nome} ${persona.cognome} può guidare: ${sePuoiGuidare}`);
+    }
+
+    //Ritorno il nuovo array completo
+    return newArray;
+}
+
+const personeConGuida = puoiGuidare(persone);
+
+console.log(personeConGuida);
